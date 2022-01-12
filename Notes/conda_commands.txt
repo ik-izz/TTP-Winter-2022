@@ -1,0 +1,16 @@
+
+  
+
+creating environment:   conda create -n <name> python=3.8
+
+activating environment:  conda activate ttp
+
+installing django in env:   pip install django (conda version 3.1.2, 3.9, 4.0, 4.0.1)
+
+
+deactivate environment:   conda deactivate
+
+removing environment:  conda env remove -n <name>
+
+to check version of django:   django-admin --version (pip install django=3.1)
+

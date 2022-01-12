@@ -1,0 +1,61 @@
+Django commands steps
+
+*make sure environment is activated
+
+*navigate to desktop
+
+1) create project folder (mkdir <name>)
+
+2) navigate into that folder (cd <name>)
+
+3) start project (django-admin startproject <name>)
+
+4) do step 7 to confirm project runs
+
+5) creats an app:   python manage.py startapp <name>
+
+6) open in VS code (code .)
+
+7) python manage.py runserver (port number optional)
+
+8) creat new folder in the APP FOLDER and name it templates (has to be named 'templates'!!!)
+   create another folder within templates name it the same as your app 
+
+9) create file named html.home in the folder (add message your message to the html file)
+
+10)go to views.py in the app folder add following code:
+
+    from django.http import HttpResponse
+    #create your views here
+    def home(request):
+    	return render(request, '<app name>/home.html')
+
+11) go to the PROJECT FOLDER, open urls.py and add the following code:
+
+    from <app name> import views  
+     path('', views.home, name='home'),  <this is places in the function urlpatterns>
+
+12) go to settings.py, go to INSTALLED_APPS and add your app name e.g. 'blog',
+
+13) do step 7 again
+
+-------------------------------------------------------------------------------------
+
+create a superuser
+
+1) python manage.py createsuperuser
+
+	if you get errors type "python manage.py migrate"
+ 	then type "python manage.py makemigrations" and you should see "no changes detected"
+	path('admin/', admin.site.urls),
+python manage.py migrate
+type python manage.py makemigrations
+python manage.py createsuperuser
+pip install pillow
+
+--------------------------------------------------------------------------------------
+to delete a superuser 
+
+> python manage.py shell
+$ from django.contrib.auth.models import User
+$ User.objects.get(username="joebloggs", is_superuser=True).delete()

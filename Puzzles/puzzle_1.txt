@@ -1,0 +1,45 @@
+R L
+5 5 black
+3 3 brown
+2 2 grey
+
+5 BL
+3 WL
+2 GL
+5 BR
+3 WR
+1 GR
+
+
+26 projects
+
+python
+html css JS
+react
+CI/CD
+Data science/ML
+
+my group: #3
+general - TA: Cherrise Hatcher
+captain- team lead: Seth Khan/Thin Thazin/ Wing Ki Au
+members: 
+	1) Israel Klein
+	2) Anwar Jahid
+	3) Justin Ademes
+	4) Sami Gadi
+	5) Chelsea Al
+	6) Ilan Rodriguez
+	7) Jennifer Guadarrama
+	8) Luis Marin
+	9) Aung Min
+	10) Seth Khan
+	11)Stephania Hoyos-Quinnones
+	12)Thin Thazin
+	13)Vince P
+	14)Wing Ki Au
+
+project #1
+website to blog (due monday 01/10/21){python: using django}
+
+
+
