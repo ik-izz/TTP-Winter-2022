@@ -1,8 +1,8 @@
-import React from "react";
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
+import React, {Component} from "react";
+import Fade from '@material-ui/core/Fade';
+import Slide from '@material-ui/core/Slide';
 
-import MyButton from '../utils/Mybuttons';
+import MyButton from '../utils/MyButton';
 
 class Discount extends Component {
     state ={

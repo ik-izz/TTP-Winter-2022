@@ -1,5 +1,5 @@
-import React, { component } from "react";
-import Slide from 'react-reveal/Slide';
+import React, { Component } from "react";
+import Slide from '@material-ui/core/Slide';
 
 class TimeUntil extends Component {
 
