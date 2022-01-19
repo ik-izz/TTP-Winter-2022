@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './resources/style.css'; //added the slash between resources and style
+import './resources/style.css'; 
 import {Element} from 'react-scroll';
 
 

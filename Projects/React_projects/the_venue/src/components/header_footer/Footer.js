@@ -1,14 +1,14 @@
 import React from 'react';
-import Fade from '@material-ui/core/Fade';
+import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
-    return(
+    return (
         <footer className='bck_red'>
-            <Fade delay={500}>
-                <div className='font_righteous footer_logo_veneue'>Opening Day</div>
-                <div className='footer_copyright'>
+            <Fade delay ={500}>
+                <div className="font_righteous footer_logo_venue">Openning Day</div>
+                <div className="fooer_copyright">
                     Yankees Stadium 2022. All rights reserved.
-                    </div>
+                </div>
             </Fade>
         </footer>
     );
