@@ -11,7 +11,7 @@ export default class Tour extends Component{
         });
     };
     render() {
-        const {id, city, img, name, info} = this.props.tour;
+        const {id, city, img, name, info, map} = this.props.tour;
         const {removeTour} = this.props;
 
         return(
@@ -32,6 +32,7 @@ export default class Tour extends Component{
                         </span>
                     </h5>
                     {this.state.showInfo && <p>{info}</p>}
+                    <iframe src={map}></iframe>
                 </div>
             </article>
         );

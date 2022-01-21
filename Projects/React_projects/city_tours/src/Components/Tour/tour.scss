@@ -1,8 +1,11 @@
 @import '../../index.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Luxurious+Roman&display=swap');
 .tour{
-    background: $mainGrey;
+    background: $mainT;
     margin: 2rem 0;
+    border-radius: 0px 15px;
+    border: 2px double rgba(255, 255, 255, 0.75);
+    box-shadow: 2px 4px 8px rgb(65, 62, 62);
     img{
         width: 100%;
         display: block;
@@ -38,8 +41,9 @@
     h3{
         text-transform: uppercase;
         color: $mainGreen;
-    }
+        }
     h4{
+        font-family: 'Luxurious Roman', cursive;
         text-transform: capitalize;
         margin: 0.2rem 0 0.6rem 0;
     }

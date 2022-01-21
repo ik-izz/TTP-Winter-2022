@@ -5,13 +5,17 @@
 }
 
 $mainBlack: #222;
-$mainGreen: #82b340;
-$mainWhite: #fff;
+$mainGreen: #4c40b3;
+$mainFlag: linear-gradient(0.25turn, #cd212a, #f4f5f0, #008c45);
 $mainGrey: #ececec;
 $mainTransition: all 0.3s linear;
+$mainT: rgba(255, 255, 255, 0.5);
+$mainWhite: #fff;
+
+
 
 body{
   font-family: 'Open Sane', sans-serif;
-  background: $mainWhite;
+  background: $mainFlag;
   color: $mainBlack;
 }
