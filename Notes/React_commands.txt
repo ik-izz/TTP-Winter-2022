@@ -17,3 +17,6 @@ npx create-react-app <name>
     and scripts into the app directory. If you do this, you can’t go back!
 
 ------------------------------------------------------------------------
+
+
+npm install --legacy-peer-deps
