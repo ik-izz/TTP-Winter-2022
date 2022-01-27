@@ -1,4 +1,4 @@
-from flask import Flask, render_template, g, request
+from flask import Flask, render_template, g , request
 from datetime import datetime
 from database import connect_db, get_db
 

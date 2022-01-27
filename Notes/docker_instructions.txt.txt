@@ -1,0 +1,63 @@
+1. create docker account/ log in
+2. In browser, go to docker page > log in > go to repositories > create new repository(todo_app)
+3. In application folder, paste the dockerfile provided in Slack:
+	FROM python
+	COPY . /app
+	WORKDIR /app
+	COPY requirements.txt .
+	RUN pip install -r requirements.txt
+	CMD ["python", "app.py"]
+4. Push changes to github for changes to take effect
+
+5. In github, go to the project folder > .github/workflows > python-package.yml
+6. In yml file delete everything and paste:
+name: Python package
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:    
+    branches: [ main ]
+jobs:
+  build:
+        
+      strategy:      
+        matrix:        
+          platform: [ubuntu-latest]
+          python-version: [3.7]            
+          
+      runs-on: ${{ matrix.platform }}    
+      steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2      
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pytest test.py
+      - name: Checking docker installation
+        run: docker run hello-world
+      - name: Push to docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: reyhec/todo_app
+	*** Change the last line to the directory in Docker where your project is stored***
+7. Commit changes to yml file
+8. In github, go to the application folder > settings > Secrets > Actions > Create two repository secrets:
+	- first secret:
+		* name: DOCKER_USERNAME
+		* value: Docker account username **your actual password**
+	-second secret:
+		* name: DOCKER_PASSWORD
+		* value: Docker account password **your actual password**
+8. Go to "Actions" in github and make sure the workflow runs successfully
+9. In terminal, go to application folder, and run: docker image build -t todo_app .
+10. Then run: docker run -p 5000:5000 -d todo_app
+11. In browser, "localhost:5000"
